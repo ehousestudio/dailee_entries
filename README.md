@@ -27,18 +27,14 @@ This plugin lets you display entries by date headers. For example, if you wanted
 
 The following parameters are currently accepted (with the defaults):
 
-{exp:entries_by_day 
-channel="" 
-limit="50" 
-show_year_header="true" 
-year_header_format="Y" 
-show_month_header="true" 
-month_header_format="F" 
-show_day_header="true" 
-day_header_format="j" 
-}
-...
-{/exp:entries_by_day}
+- channel="" 
+- limit="50" 
+- show_year_header="true" 
+- year_header_format="Y" 
+- show_month_header="true" 
+- month_header_format="F" 
+- show_day_header="true" 
+- day_header_format="j" 
 
 To only show a day header, with the entry title, like this:
 
@@ -47,6 +43,7 @@ To only show a day header, with the entry title, like this:
 
 You would format your tag like so:
 
+```
 {exp:entries_by_day 
   channel="channel_short_name" 
   limit="50" 
@@ -57,6 +54,7 @@ You would format your tag like so:
 }
   <li>{title}</li>
 {/exp:entries_by_day}
+```
 
 Note that:
   1. each "entry" is dropped into an unordered list, so the content inside the tag should start and end with a li tag. (See below for remaining todos)
