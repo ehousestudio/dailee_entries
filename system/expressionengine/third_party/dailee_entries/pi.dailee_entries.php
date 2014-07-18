@@ -25,23 +25,17 @@
  */
 
 $plugin_info = array(
-	'pi_name'		=> 'Entries By Day',
+	'pi_name'		=> 'Dailee Entries',
 	'pi_version'	=> '1.0',
 	'pi_author'		=> 'Samuel J. King',
-	'pi_author_url'	=> 'http://samueljking.net',
+	'pi_author_url'	=> 'http://www.ehousestudio.com',
 	'pi_description'=> 'Returns a list of entries categorized by day, month, and year.',
-	'pi_usage'		=> Entries_by_day::usage()
+	'pi_usage'		=> Dailee_entries::usage()
 );
 
 // ------------------------------------------------------------------------
-/*
-		TODOS:
-		1. ADD A START AND END DATE PARAMETER
-		2. ADD A WAY TO MODIFY OUTPUT DISPLAY (NESTED/LINEAR, OR SOMETHING LIKE THAT)
-		3. ADD THE ABILITY TO CONTROL HTML WRAPPING ELEMENTS AROUND THE HEADER DISPLAY
-*/
 
-class Entries_by_day {
+class Dailee_entries {
 
 	public $return_data;
 
@@ -221,7 +215,7 @@ This plugin lets you display entries by date headers. For example, if you wanted
 
 The following parameters are currently accepted (with the defaults):
 
-{exp:entries_by_day 
+{exp:dailee_entries 
 channel="" 
 limit="50" 
 show_year_header="true" 
@@ -232,7 +226,7 @@ show_day_header="true"
 day_header_format="j" 
 }
 ...
-{/exp:entries_by_day}
+{/exp:dailee_entries}
 
 To only show a day header, with the entry title, like this:
 
@@ -241,7 +235,7 @@ To only show a day header, with the entry title, like this:
 
 You would format your tag like so:
 
-{exp:entries_by_day 
+{exp:dailee_entries 
 	channel="channel_short_name" 
 	limit="50" 
 	show_year_header="false" 
@@ -250,7 +244,7 @@ You would format your tag like so:
 	day_header_format="F j, Y" 
 }
 	<li>{title}</li>
-{/exp:entries_by_day}
+{/exp:dailee_entries}
 
 Note that:
 	1. each "entry" is dropped into an unordered list, so the content inside the tag should start and end with a li tag. (See below for remaining todos)
@@ -273,5 +267,5 @@ This plugin was developed for a specific purpose and will not fit every situatio
 	}
 }
 
-/* End of file pi.entries_by_day.php */
-/* Location: /system/expressionengine/third_party/entries_by_day/pi.entries_by_day.php */
+/* End of file pi.dailee_entries.php */
+/* Location: /system/expressionengine/third_party/dailee_entries/pi.dailee_entries.php */
